@@ -24,7 +24,8 @@
 .product-grid3 .rating{padding:0;margin:-22px 0 0;list-style:none;text-align:right;display:block}
 .product-grid3 .rating li{color:#ffd200;font-size:13px;display:inline-block}
 .product-grid3 .rating li.disable{color:#dcdcdc}
-.banner {margin:50px 0 60px 0}
+.banner {margin:100px 0 60px 0}
+.cart {margin:6px 0 0 14px}
 @media only screen and (max-width:1200px){.product-grid3 .rating{margin:0}
 }
 @media only screen and (max-width:990px){.product-grid3{margin-bottom:30px}
