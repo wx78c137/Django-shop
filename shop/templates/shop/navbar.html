@@ -19,7 +19,6 @@
     <ul class="nav navbar-nav navbar-right">
             {% with totail_items=cart|length %}
                 {% if cart|length > 0 %}
-				<i class="fas fa-cart-plus"></i>
 				<a href="{% url "cart:cart_detail" %}" style="color: #ffffff" class="btn btn-light pull-right cart">
 				<i class="fas fa-cart-plus"></i>
 				</a>
