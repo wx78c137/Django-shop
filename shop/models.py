@@ -25,11 +25,7 @@ class Product(models.Model):
     name = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100, db_index=True)
     description = models.TextField(blank=True)
-<<<<<<< HEAD
     price = models.DecimalField(max_digits=20, decimal_places=0)
-=======
-    price = models.DecimalField(max_digits=10, decimal_places=0)
->>>>>>> 4fe2d4b5d1b24c3595bb7158469c5c7ade0b8486
     available = models.BooleanField(default=True)
     stock = models.PositiveIntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
