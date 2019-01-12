@@ -17,4 +17,7 @@ class OrderCreateForm(forms.ModelForm):
         Field('email', css_class='form-control mb-3'),
         Field('phone_number', css_class='form-control'),
 		Field('city', css_class='form-control'),
+        ButtonHolder(
+                Submit('submit', 'Submit', css_class='button white')
+            )
     )
