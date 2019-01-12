@@ -14,7 +14,7 @@
                     {% if cart|length > 0 %}
                         My Shopping Order:
                         <a href="{% url "cart:cart_detail" %}" style="color: #ffffff">
-                            {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
+                            {{ totail_items }} item {{ totail_items|pluralize }}, {{ cart.get_total_price }} VNĐ
                         </a>
                         {% else %}
                         Your cart is empty.
@@ -62,7 +62,7 @@
                 <tr style="background-color: #5AC8FA">
                     <td><b>Total</b></td>
                     <td colspan="4"></td>
-                    <td colspan="num"><b>kshs. {{ cart.get_total_price }}</b></td>
+                    <td colspan="num"><b>{{ cart.get_total_price }} VNĐ</b></td>
                 </tr>
                 </tbody>
             </table>
