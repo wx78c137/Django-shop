@@ -7,19 +7,15 @@
 {% block content %}
 
 <div class="container">
-    <h3 class="h3">shopping Demo-3 </h3>
     <div class="row">
 		{% for product in products %}
         <div class="col-md-3 col-sm-6">
             <div class="product-grid3">
                 <div class="product-image3">
                     <a href="{{ product.get_absolute_url }}">
-						<img class="pic-1" src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}"
+						<img class="pic-1" src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}">
+						<img class="pic-2" src="{% if product.image2 %} {{ product.image2.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}">
                     </a>
-                    <ul class="social">
-                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
                     <span class="product-new-label">New</span>
                 </div>
                 <div class="product-content">
