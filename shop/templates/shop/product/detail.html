@@ -5,24 +5,22 @@
 {% endblock %}
 
 {% block content %}
-   <div class="container">
    
-   <div class="row">
+   <div class="row detail">
                <div class="col-xs-4 item-photo">
                     <img style="max-width:100%;" src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" />
                 </div>
                 <div class="col-xs-5" style="border:0px solid gray">
                     <!-- Datos del vendedor y titulo del producto -->
                     <h3>{{ product.name }}</h3>    
-                    <h5 <a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h5>
+                    <h5 <a href="{{ product.category.get_absolute_url }}"{{ product.category }}></a></h5>
         
                     <!-- Precios -->
                     <h6 class="title-price"><small>Giá Tiền:</small></h6>
                     <h3 style="margin-top:0px;">{{ product.price }}.000 VNĐ</h3>
         
                     <!-- Detalles especificos del producto -->
-                    <div class="section">
-                        <h6 class="title-attr" style="margin-top:15px;" ><small>COLOR</small></h6>                    
+                    <div class="section">                 
                         <div>
                             <div class="attr" style="width:25px;background:#5a5a5a;"></div>
                             <div class="attr" style="width:25px;background:white;"></div>
@@ -40,12 +38,6 @@
                 </div>                              
         
                 <div class="col-xs-9">
-                    <ul class="menu-items">
-                        <li class="active">Detalle del producto</li>
-                        <li>Garantía</li>
-                        <li>Vendedor</li>
-                        <li>Envío</li>
-                    </ul>
                     <div style="width:100%;border-top:1px solid silver">
                         <p style="padding:15px;">
                             <small>
@@ -61,5 +53,4 @@
 			
 
 
-    </div><!-- /.container -->
 {% endblock %}
