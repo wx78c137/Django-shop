@@ -28,7 +28,7 @@
 .cart {margin:6px 20px 0 14px}
 .detail {margin-top: 100px}
 .item-photo {margin: 0 0 40px 0}
-.detail-button {display: block, margin-top:15px}
+.detail-button {display: block; margin-top:15px}
 @media only screen and (max-width:1200px){.product-grid3 .rating{margin:0}
 }
 @media only screen and (max-width:990px){.product-grid3{margin-bottom:30px}
