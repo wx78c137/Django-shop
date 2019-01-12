@@ -21,13 +21,13 @@
                 {% if cart|length > 0 %}
 				
 				<a href="{% url "cart:cart_detail" %}" style="color: #ffffff" class="btn btn-light pull-right cart">
-				<i class="fas fa-cart-plus">Cart: {{ totail_items }} item {{ totail_items|pluralize }}, {{ cart.get_total_price }} VNĐ</i>
+				<i class="fas fa-cart-plus">    Cart: {{ totail_items }} item {{ totail_items|pluralize }}, {{ cart.get_total_price }} VNĐ</i>
 				</a>
 				
                     {% else %}
 				
 				<a href="#" style="color: #ffffff" class="btn btn-light pull-right cart">
-				<i class="fas fa-shopping-cart">Your cart is empty.</i>
+				<i class="fas fa-shopping-cart">    Your cart is empty.</i>
 				</a>
                 {% endif %}
             {% endwith %}
