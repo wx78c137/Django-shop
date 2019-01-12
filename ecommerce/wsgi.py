@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/
 """
 
 import os,sys
+sys.path.append('/home/vivuvoveva1991/django-cart/lib/python3.5/site-packages')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ecommerce.settings")
 from django.core.wsgi import get_wsgi_application
 
