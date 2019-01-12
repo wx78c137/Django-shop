@@ -19,11 +19,21 @@
     <ul class="nav navbar-nav navbar-right">
             {% with totail_items=cart|length %}
                 {% if cart|length > 0 %}
-                    <a href="{% url "cart:cart_detail" %}" style="color: #ffffff" class="btn btn-light pull-right cart">
-                        Cart: {{ totail_items }} item {{ totail_items|pluralize }}, {{ cart.get_total_price }} VNĐ
-                    </a>
+				
+				<button type="button" class="btn btn-default btn-sm">
+				<span class="glyphicon glyphicon-shopping-cart"></span>
+				<a href="{% url "cart:cart_detail" %}" style="color: #ffffff" class="btn btn-light pull-right cart">
+				Cart: {{ totail_items }} item {{ totail_items|pluralize }}, {{ cart.get_total_price }} VNĐ
+				</a>
+				</button>
+				
                     {% else %}
-                    <a href-"#" class="btn btn-light pull-right cart" >Your cart is empty.</a>
+				<button type="button" class="btn btn-default btn-sm">
+				<span class="glyphicon glyphicon-shopping-cart"></span>
+				<a href="#" style="color: #ffffff" class="btn btn-light pull-right cart">
+				Your cart is empty.
+				</a>
+				</button>
                 {% endif %}
             {% endwith %}
       <li class="dropdown">
