@@ -18,6 +18,6 @@ class OrderCreateForm(forms.ModelForm):
         Field('phone_number', css_class='form-control'),
 		Field('city', css_class='form-control'),
         ButtonHolder(
-                Submit('submit', 'Submit', css_class='order-button')
+                Submit('submit', 'Submit', css_class='order-button btn-primary btn-sm')
             )
     )
