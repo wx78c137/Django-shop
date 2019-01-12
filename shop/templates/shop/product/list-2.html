@@ -7,6 +7,10 @@
 {% block content %}
 
 
+
+
+<div class="container">
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -22,11 +26,11 @@
     </div>
 
     <div class="item">
-      <img src="chicago.jpg" alt="Chicago">
+      <img src={% static 'img/slide1.jpg' %} >
     </div>
 
     <div class="item">
-      <img src="ny.jpg" alt="New York">
+      <img src={% static 'img/slide2.jpg' %}>
     </div>
   </div>
 
@@ -41,7 +45,8 @@
   </a>
 </div>
 
-<div class="container">
+
+
     <div class="row">
 		{% for product in products %}
         <div class="col-md-3 col-sm-6">
