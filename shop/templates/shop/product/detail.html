@@ -17,8 +17,9 @@
                     <h5 <a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h5>
         
                     <!-- Precios -->
-                    <h6 class="title-price"><small>Giá Tiền:</small></h6>
-                    <h3 style="margin-top:0px;">{{ product.price }}.000 VNĐ</h3>
+                    <h6 class="title-price"><small>Giá Tiền: {{ product.price }}.000 VNĐ</small></h6>
+					
+					<h6 class="title-price"><small>Size: Free</small></h6>
         
                     <!-- Detalles especificos del producto -->
                     <div class="section">                  
@@ -27,10 +28,10 @@
                             <div class="attr" style="width:25px;background:white;"></div>
                         </div>
                     </div>
-					<form action="{% url "cart:cart_add" product.id %}" method="post">
+					<form class="detail-form" action="{% url "cart:cart_add" product.id %}" method="post">
                                 {% csrf_token %}
                                 {{ cart_product_form }}
-                                <input type="submit" value="add to cart" class="btn btn-success">
+                                <input type="submit" value="add to cart" class="btn btn-success d-block">
                     </form>
                                   
         
