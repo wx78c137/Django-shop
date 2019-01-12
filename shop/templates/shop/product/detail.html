@@ -6,37 +6,60 @@
 
 {% block content %}
    <div class="container">
-      <div class="row" style="margin-top: 6%">
-
-        <div class="col-sm-8 blog-main">
-
-          <div class="blog-post">
-              <div class="row">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="col-md-6 text-right">
-                            <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" alt="..." style="height: 170px; width: auto">
-                        </div>
-                        <div class="col-md-6" style="padding-left: 20px">
-                            <h3>{{ product.name }}</h3>
-                            <h6><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h6>
-                            <p class="text-muted">Kshs. {{ product.price }}</p>
-                            <form action="{% url "cart:cart_add" product.id %}" method="post">
-                                {% csrf_token %}
-                                {{ cart_product_form }}
-                                <input type="submit" value="add to cart" class="btn btn-primary">
-                            </form>
-                            <p>{{ product.description|safe|linebreaksbr }}</p>
+   
+   <div class="row">
+               <div class="col-xs-4 item-photo">
+                    <img style="max-width:100%;" src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" />
+                </div>
+                <div class="col-xs-5" style="border:0px solid gray">
+                    <!-- Datos del vendedor y titulo del producto -->
+                    <h3>{{ product.name }}</h3>    
+                    <h5 <a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h5>
+        
+                    <!-- Precios -->
+                    <h6 class="title-price"><small>Giá Tiền:</small></h6>
+                    <h3 style="margin-top:0px;">{{ product.price }}.000 VNĐ</h3>
+        
+                    <!-- Detalles especificos del producto -->
+                    <div class="section">
+                        <h6 class="title-attr" style="margin-top:15px;" ><small>COLOR</small></h6>                    
+                        <div>
+                            <div class="attr" style="width:25px;background:#5a5a5a;"></div>
+                            <div class="attr" style="width:25px;background:white;"></div>
                         </div>
                     </div>
-                </div>
-              </div>
+					<form action="{% url "cart:cart_add" product.id %}" method="post">
+                                {% csrf_token %}
+                                {{ cart_product_form }}
+                                <input type="submit" value="add to cart" class="btn btn-success">
+                    </form>
+                                  
+        
+                    <!-- Botones de compra -->
+                                                        
+                </div>                              
+        
+                <div class="col-xs-9">
+                    <ul class="menu-items">
+                        <li class="active">Detalle del producto</li>
+                        <li>Garantía</li>
+                        <li>Vendedor</li>
+                        <li>Envío</li>
+                    </ul>
+                    <div style="width:100%;border-top:1px solid silver">
+                        <p style="padding:15px;">
+                            <small>
+							{{ product.description|safe|linebreaksbr }}
+                            </small>
+                        </p>
+                    </div>
+                </div>		
+            </div>
+			
+			
+			
+			
 
-
-          </div><!-- /.blog-post -->
-
-        </div><!-- /.blog-main -->
-      </div><!-- /.row -->
 
     </div><!-- /.container -->
 {% endblock %}
