@@ -8,9 +8,9 @@ class OrderCreateForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ['first_name', 'last_name', 'email', 'address', 'phone_number', 'city']
-        helper = FormHelper()
-        helper.form_class = 'form-group'
-        helper.layout = Layout(
+    helper = FormHelper()
+    helper.form_class = 'form-group'
+    helper.layout = Layout(
         Field('first_name', css_class='form-control mt-2 mb-3'),
         Field('address', rows="3", css_class='form-control mb-3'),
         Field('last_name', css_class='form-control mb-3'),
