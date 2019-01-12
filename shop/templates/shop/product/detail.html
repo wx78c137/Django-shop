@@ -28,11 +28,15 @@
                             <div class="attr" style="width:25px;background:white;"></div>
                         </div>
                     </div>
+					<h6>
+					<small>
 					<form class="detail-form" action="{% url "cart:cart_add" product.id %}" method="post">
                                 {% csrf_token %}
                                 {{ cart_product_form }}
-                                <input type="submit" value="add to cart" class="btn btn-success d-block">
+                                <input type="submit" value="add to cart" class="btn btn-success detail-button">
                     </form>
+					</small>
+					</h6>
                                   
         
                     <!-- Botones de compra -->
