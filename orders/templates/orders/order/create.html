@@ -12,7 +12,7 @@
                 <form action="." method="post" class="form-horizontal">
 				<div class="form-group"
                     {% csrf_token %}
-                    {{ form.as_p }}
+                    {{ form}}
 				</div>
                     <input type="submit" class="btn btn-primary" value="Submit order">
                 </form>
