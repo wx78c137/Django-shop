@@ -54,8 +54,8 @@
                             <td>
                                 <a href="{% url "cart:cart_remove" product.id %}">Remove</a>
                             </td>
-                            <td>kshs. {{ item.price }}</td>
-                            <td>kshs. {{ item.total_price }}</td>
+                            <td>{{ item.price }} VNĐ</td>
+                            <td>{{ item.total_price }} VNĐ</td>
                         </tr>
                     {% endwith %}
                 {% endfor %}
