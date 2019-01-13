@@ -4,11 +4,15 @@ server {
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {
-        root /home/vivuvoveva1991/Django-shop;
+        root /home/<user>/Django-shop;
+    }
+    
+    location /media/ {
+        alias /home/<user>/Django-shop/products/ ;
     }
 
     location / {
         include proxy_params;
-        proxy_pass http://unix:/home/vivuvoveva1991/Django-shop/ecommerce.sock;
+        proxy_pass http://unix:/home/<user>/Django-shop/ecommerce.sock;
     }
 }
