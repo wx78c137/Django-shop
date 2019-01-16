@@ -14,16 +14,13 @@
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	  <div class="center-block">
 	  <ul class="nav navbar-nav text-center">
 		  {%for c in categories %}
 		  <li> <a href="{{c.get_absolute_url}}" >{{c.name}}</a></li> 
 		  {% endfor %}
-    	</ul>
-	  </div>
   	
 
-    <ul class="nav navbar-nav navbar-right">
+    <li>
             {% with totail_items=cart|length %}
                 {% if cart|length > 0 %}
 				
@@ -38,6 +35,7 @@
 				</a>
                 {% endif %}
             {% endwith %}
+    </li>
     </ul>
   </div><!-- /.navbar-collapse -->
   </div>
