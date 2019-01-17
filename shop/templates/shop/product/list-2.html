@@ -48,7 +48,11 @@
 {% endif %}
 
 
+    {% if category %}
+    <div class="row" styles="margin-top: 10rem">
+      {% else %}
     <div class="row">
+      {% endif %}
 		{% for product in products %}
         <div class="col-md-3 col-sm-6">
             <div class="product-grid3">
