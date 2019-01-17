@@ -27,9 +27,10 @@ def cart_detail(request):
     cart = Cart(request)
     categories = Category.objects.all()
     if cart is None:
-        return redirect('shop: list-2')
-    for item in cart:
-        item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'], 'update': True})
-        return render(request, 'cart/detail.html', {'cart': cart, 'categories': categories})
+        return redirect('shop: product_list')
+    else:
+        for item in cart:
+            item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'], 'update': True})
+            return render(request, 'cart/detail.html', {'cart': cart, 'categories': categories})
 
 
