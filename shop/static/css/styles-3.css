@@ -33,6 +33,7 @@
 .order-button {margin: 20px 0 0 0}
 .navbar-nav {float: none;} 
 .navbar-nav li {float:none; display:inline-block;}
+.navbar-nav li a {color: white; font-weight:bold; text-transform: uppercase}
 #id_first_name #id_last_name #id_email #id_phone_number #id_city #id_address {width: 350px}
 @media only screen and (max-width:1200px){.product-grid3 .rating{margin:0}
 }
