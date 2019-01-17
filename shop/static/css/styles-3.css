@@ -31,6 +31,7 @@
 .detail-button {display: block; margin-top:15px}
 .button-border-top {border-top:1px solid black; margin: 20px 0 0 0}
 .order-button {margin: 20px 0 0 0}
+.navbar-brand {font-weight: bold}
 .navbar-nav {float: none;} 
 .navbar-nav li {float:none; display:inline-block;}
 .navbar-nav li a {color: white !important; font-weight:bold; text-transform: uppercase}
