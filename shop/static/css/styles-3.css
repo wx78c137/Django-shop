@@ -27,6 +27,7 @@ html {min-height:100%; height: 100%}
 .product-grid3 .rating li{color:#ffd200;font-size:13px;display:inline-block}
 .product-grid3 .rating li.disable{color:#dcdcdc}
 .banner {margin:100px 0 60px 0}
+.banner-arrow {position: absolute; top: 50%; }
 .cart {margin:6px 20px 0 14px}
 .detail {margin-top: 100px}
 .item-photo {margin: 0 0 40px 0}
