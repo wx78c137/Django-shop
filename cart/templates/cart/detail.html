@@ -20,6 +20,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                  {% if cart %}
                 {% for item in cart %}
                     {% with product=item.product  %}
                         <tr>
@@ -45,6 +46,7 @@
                         </tr>
                     {% endwith %}
                 {% endfor %}
+                {% endif %}
                 <tr style="background-color: silver">
                     <td><b>Total</b></td>
                     <td colspan="4"></td>
