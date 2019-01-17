@@ -19,7 +19,7 @@
                     <!-- Precios -->
                     <h4 class="title-price"><small>Giá Tiền: {{ product.price }} VNĐ</small></h4>
 					
-					<h4 class="title-price"><small>Size: Free</small></h4>
+					<h4 class="title-price">Size: Free</h4>
         
                     <!-- Detalles especificos del producto -->
                     <div class="section">                  
@@ -29,7 +29,6 @@
                         </div>
                     </div>
 					<h3>
-					<small>
 					<form class="detail-form" action="{% url "cart:cart_add" product.id %}" method="post">
                                 {% csrf_token %}
                                 {{ cart_product_form }}
@@ -37,7 +36,6 @@
                                 <input type="submit" value="add to cart" class="btn btn-success btn-lg detail-button">
 								</div>
                     </form>
-					</small>
 					</h3>
                                   
         
