@@ -1,6 +1,4 @@
 /********************* Shopping Demo-3 **********************/
-body {position:relative; padding-bottom: 30rem; min-height:100%}
-html {min-height:100%; height: 100%}
 .product-grid3{font-family:Roboto,sans-serif;text-align:center;position:relative;z-index:1}
 .product-grid3:before{content:"";height:81%;width:100%;background:#fff;border:1px solid rgba(0,0,0,.1);opacity:0;position:absolute;top:0;left:0;z-index:-1;transition:all .5s ease 0s}
 .product-grid3:hover:before{opacity:1;height:100%}
@@ -27,7 +25,7 @@ html {min-height:100%; height: 100%}
 .product-grid3 .rating li{color:#ffd200;font-size:13px;display:inline-block}
 .product-grid3 .rating li.disable{color:#dcdcdc}
 .banner {margin:100px 0 60px 0}
-.banner-arrow {position: absolute; top: 50%; }
+.banner-arrow {position: absolute; top: 50%;}
 .cart {margin:6px 20px 0 14px}
 .detail {margin-top: 100px}
 .item-photo {margin: 0 0 40px 0}
@@ -38,6 +36,7 @@ html {min-height:100%; height: 100%}
 .navbar-nav {float: none;} 
 .navbar-nav li {float:none; display:inline-block;}
 .navbar-nav li a {color: white !important; font-weight:bold; text-transform: uppercase}
+.min-height-600 {min-height: 630px;}
 #id_first_name #id_last_name #id_email #id_phone_number #id_city #id_address {width: 350px}
 @media only screen and (max-width:1200px){.product-grid3 .rating{margin:0}
 }
