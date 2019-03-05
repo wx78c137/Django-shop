@@ -43,3 +43,6 @@
 float: none;
 display: inline-block;
 }
+.navbar-nav {
+float: none;
+}
