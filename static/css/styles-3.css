@@ -42,7 +42,16 @@
 .navbar-nav>li{
 float: none;
 display: inline-block;
+text-transform: uppercase;
+font-weight: bold;
+color: white;
 }
 .navbar-nav {
 float: none;
+}
+.navbar-nav>li>a {
+color: white;
+}
+.nav-cart {
+text-transform: uppercase;
 }
