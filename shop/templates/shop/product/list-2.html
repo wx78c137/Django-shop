@@ -63,7 +63,7 @@
                             <img class="pic-2"
                                  src="{% if product.image2 %} {{ product.image2.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}">
                         </a>
-                        <span class="product-new-label">New</span>
+                        <!-- <span class="product-new-label">New</span> -->
                     </div>
                     <div class="product-content">
                         <h3 class="title"><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3>
