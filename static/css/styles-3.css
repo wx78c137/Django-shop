@@ -50,7 +50,7 @@ color: white;
 float: none;
 }
 .navbar-nav>li>a {
-color: white;
+color: white !important;
 }
 .nav-cart {
 text-transform: uppercase;
