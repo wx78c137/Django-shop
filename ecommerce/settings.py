@@ -25,11 +25,11 @@ SECRET_KEY = 'jf$ac236s)uv)6xa&o0#@wmt+37zvlwf=atbi)%et^7=%3#$bb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 ALLOWED_HOSTS = ['beautybeauty.vn']
-=======
-ALLOWED_HOSTS = ['35.236.172.46', '127.0.0.1']
->>>>>>> 436ab4a1a447f2163652453f5d2eee6c8856c68c
+#=======
+#ALLOWED_HOSTS = ['35.236.172.46', '127.0.0.1']
+#>>>>>>> 436ab4a1a447f2163652453f5d2eee6c8856c68c
 
 
 # Application definition
