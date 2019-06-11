@@ -53,22 +53,22 @@
         {% else %}
         <div class="row">
             {% endif %}
-            {% for product in products %}
+            {% for item in page_items %}
             <div class="col-md-3 col-sm-6">
                 <div class="product-grid3">
                     <div class="product-image3">
-                        <a href="{{ product.get_absolute_url }}">
+                        <a href="{{ item.get_absolute_url }}">
                             <img class="pic-1"
-                                 src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}">
+                                 src="{% if item.image %} {{ item.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}">
                             <img class="pic-2"
-                                 src="{% if product.image2 %} {{ product.image2.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}">
+                                 src="{% if item.image2 %} {{ item.image2.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}">
                         </a>
                         <!-- <span class="product-new-label">New</span> -->
                     </div>
                     <div class="product-content">
-                        <h3 class="title"><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3>
+                        <h3 class="title"><a href="{{ item.get_absolute_url }}">{{ item.name }}</a></h3>
                         <div class="price">
-                            {{ product.price }} VNĐ
+                            {{ item.price }} VNĐ
                             <span></span>
                         </div>
                     </div>
