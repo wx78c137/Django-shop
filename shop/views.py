@@ -8,7 +8,7 @@ def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True).order_by('-created_at')
-    paginator = Paginator(products, 25)
+    paginator = Paginator(products, 24)
     page = request.GET.get('page')
     page_items = paginator.get_page(page)
     if category_slug:
