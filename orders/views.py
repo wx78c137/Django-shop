@@ -22,7 +22,7 @@ def order_create(request):
                     quantity=item['quantity']
                 )
             cart.clear()
-            send_mail('New Order','Please check admin page','vivuvoveva1991@gmail.com',['vivuvoveva1991@gmail.com'],fail_silently=False,)
+            send_mail('New Order','Please check Order','Admin BeautyBeauty',['lipstick1407@gmail.com'],fail_silently=False,)
             return render(request, 'orders/order/created.html', {'order': order, 'categories': categories})
     else:
         form = OrderCreateForm()
