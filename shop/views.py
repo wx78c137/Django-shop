@@ -13,7 +13,11 @@ def product_list(request, category_slug=None):
     page_items = paginator.get_page(page)
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
-        products = Product.objects.filter(category=category)
+        products = Product.objects.filter(category=category).order_by('-created_at')
+        paginator = Paginator(products, 24)
+        page = request.GET.get('page')
+        page_items = paginator.get_page(page)
+
 
     context = {
         'category': category,
